@@ -1,0 +1,147 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void adicao()
+{
+float x,y,total;
+char sn;
+do{
+system("cls");
+printf("OBS:DIGITE _0 PARA SAIR \n");
+printf("Digite a primeira parcela:\n");
+scanf("%f",&x);
+
+        if (x!=-0)
+            {
+                printf("+\n");
+                scanf("%f",&y);
+                total = x+y;
+                printf("=\n");
+                printf("%.2f\n",total);
+                getch();
+            }
+        else
+            {
+                main();
+            }
+    }while(x!=-0);
+}
+
+void subtracao()
+{
+float x,y,total;
+char sn;
+do{
+system("cls");
+printf("OBS:DIGITE _0 PARA SAIR\n");
+printf("Digite a primeira parcela:\n");
+scanf("%f",&x);
+
+            if (x!=-0)
+                {
+                    printf("-\n");
+                    scanf("%f",&y);
+                    total = x-y;
+                    printf("=\n");
+                    printf("%.2f\n",total);
+                        getch();
+                }
+            else
+                {
+                    main();
+                }
+    }while(x!=-0);
+}
+
+void multiplicacao()
+{
+float x,y,total;
+char sn;
+do{
+system("cls");
+printf("OBS:DIGITE _0 PARA SAIR\n");
+printf("Digite a primeira parcela:\n");
+scanf("%f",&x);
+            if (x!=-0)
+                {
+                    printf("x\n");
+                    scanf("%f",&y);
+                    total = x*y;
+                    printf("=\n");
+                    printf("%.2f\n",total);
+                    getch();
+                }
+            else
+                {
+                    main();
+                }
+    }while(x!=-0);
+}
+
+void divisao()
+{
+float x,y,total;
+char sn;
+do{
+system("cls");
+printf("OBS:DIGITE _0 PARA SAIR\n");
+printf("Digite a primeira parcela:\n");
+scanf("%f",&x);
+            if (x!=-0)
+            {
+                printf("/\n");
+                scanf("%f",&y);
+                total = x/y;
+                printf("=\n");
+                printf("%.2f\n",total);
+                getch();
+                adicao();
+            }
+            else
+                {
+                    main();
+                }
+    }while(x!=-0);
+}
+
+void menu(){
+int opcao;
+        system("cls");
+        printf("MENU\n");
+        printf("1-ADICAO\n");
+        printf("2-SUBTRACAO\n");
+        printf("3-MULTIPLICACAO\n");
+        printf("4-DIVISAO\n");
+        printf("5-SAIR\n");
+        printf(">>");
+        scanf("%d",&opcao);
+
+    switch(opcao)
+{
+    case 1:
+        adicao();
+        break;
+    case 2:
+        subtracao();
+        break;
+    case 3:
+        multiplicacao();
+        break;
+    case 4:
+        divisao();
+        break;
+    default:
+        system("exit");
+        }
+}
+    main()
+    {
+
+
+            printf("||||||||||||||\n");
+            printf("||CALCULADORA||\n");
+            printf("||||||bruno|||||");
+            printf("||||||||||||||||\n");
+            menu();
+
+    }
